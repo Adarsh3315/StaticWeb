@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <title>Profile-Maruti Nandan</title>
+      <style>
+            .profile-logo {
+                  width: 150px;
+                  height: 150px;
+                  object-fit: cover;
+                  border-radius: 50%;
+                  cursor: pointer;
+            }
+
+            body {
+                  background: linear-gradient(to right, #ff4500, #a4a4a4, #00ff00);
+                  padding: 20px;
+                  border-radius: 120px;
+                  font-weight: bold;
+                  font-size: 25px;
+                  font-family: cursive;
+            }
+      </style>
+</head>
+
+<body>
+      <div class="text-center">
+            <img src="https://cdn.pixabay.com/photo/2022/06/25/07/21/seagull-7282992_1280.png" alt="Profile Logo"
+                  id="profile-logo" class="profile-logo">
+            <input type="file" id="photo-input" style="display: none;">
+      </div>
+      <div class="mt-3">
+            <label for="name" style="color:#fff">Name :-</label>
+            <input type="text" id="name" class="form-control" placeholder="Adarsh Pandey">
+      </div>
+      <div class="mt-3">
+            <label for="phone" style="color:#fff;">Phone :-</label>
+            <input type="text" id="phone" class="form-control" placeholder="1234567890">
+      </div>
+      <div class="mt-3">
+            <label for="email" style="color:#fff;">Email :-</label>
+            <textarea id="email" class="form-control" placeholder="pandey@outlook.com"></textarea>
+      </div>
+      <div class="mt-3">
+            <label for="gender" style="color:#fff;">Gender :-</label>
+            <textarea id="gender" class="form-control" placeholder="Male"></textarea>
+      </div>
+      <div class="mt-3">
+            <label for="city" style="color:#fff;">City :-</label>
+            <textarea id="city" class="form-control" placeholder="Ranip"></textarea>
+      </div>
+      <div class="mt-3">
+            <label for="district" style="color:#fff;">District :-</label>
+            <textarea id="district" class="form-control" placeholder="Ahmedabad"></textarea>
+      </div>
+      <div class="mt-3">
+            <label for="state" style="color:#fff;">State :-</label>
+            <textarea id="state" class="form-control" placeholder="Gujarat"></textarea>
+      </div>
+      <div class="mt-3">
+            <label for="country" style="color:#fff;">Country :-</label>
+            <textarea id="country" class="form-control" placeholder="India"></textarea>
+      </div>
+      <div class="mt-3">
+            <label for="pincode" style="color:#fff;">Pincode :-</label>
+            <textarea id="pincode" class="form-control" placeholder="382480"></textarea>
+      </div>
+      <div class="mt-4 text-center">
+            <button id="save-button" class="btn btn-primary">Save</button>
+      </div>
+
+      <script>
+            $(document).ready(function () {
+                  $("#profile-logo").click(function () {
+                        $("#photo-input").click();
+                  });
+
+                  $("#photo-input").change(function () {
+                        var file = this.files[0];
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                              $("#profile-logo").attr("src", e.target.result);
+                        };
+                        reader.readAsDataURL(file);
+                  });
+
+                  $("#save-button").click(function () {
+                        window.location.href = "index.html";
+                  });
+            });
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+      <meta charset="utf-8">
+      <title>Login-Maruti Nandan</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<style>
+      * {
+            margin: 0;
+            padding: 0;
+            border-radius: 5px;
+            box-sizing: border-box;
+      }
+
+      body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            font-family: sans-serif;
+            justify-content: center;
+            background: url(https://media.istockphoto.com/id/1407368087/photo/sunrise-orange-blue-sky-gradient-clear-sky-without-clouds-beautiful-red-and-light-blue-sky.webp?s=170667a&w=0&k=20&c=tfmAIpk-Ai1W1tpNL8SXWPP2q-F36mbZ2Xbir3ghfPU=);
+            background-size: cover;
+            background-position: center;
+      }
+
+      .container {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            padding: 60px 40px;
+      }
+
+      header {
+            color: red;
+            font-size: 45px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            font-family: cursive;
+      }
+
+      .input-field,
+      form .button {
+            margin: 25px 0;
+            position: relative;
+            height: 50px;
+            width: 100%;
+      }
+
+      .input-field input {
+            height: 100%;
+            width: 100%;
+            border: 1px solid silver;
+            padding-left: 15px;
+            outline: none;
+            font-size: 19px;
+            transition: .4s;
+      }
+
+      input:focus {
+            border: 1px solid #1DA1F2;
+      }
+
+      .input-field label,
+      span.show {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+      }
+
+      .input-field label {
+            left: 15px;
+            pointer-events: none;
+            color: grey;
+            font-size: 18px;
+            transition: .4s;
+      }
+
+      span.show {
+            right: 20px;
+            color: #111;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+            visibility: hidden;
+            font-family: 'Open Sans', sans-serif;
+      }
+
+      input:valid~span.show {
+            visibility: visible;
+      }
+
+      form .button {
+            margin-top: 30px;
+            overflow: hidden;
+            z-index: 111;
+      }
+
+      .button .inner {
+            position: absolute;
+            height: 100%;
+            width: 300%;
+            left: -100%;
+            z-index: -1;
+            transition: all .5s;
+            background: -webkit-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
+      }
+
+      .button:hover .inner {
+            left: 0;
+      }
+
+      .button button {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: none;
+            outline: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+      }
+
+      .container .auth {
+            margin: 35px 0 20px 0;
+            font-size: 22px;
+            color: lime;
+            font-family: cursive;
+      }
+
+      .links {
+            display: flex;
+            cursor: pointer;
+      }
+
+      .facebook,
+      .google {
+            height: 40px;
+            width: 100%;
+            border: 1px solid white;
+            border-radius: 3px;
+            margin: 0 10px;
+            transition: .4s;
+      }
+
+      .facebook:hover {
+            border: 1px solid blue;
+            background-color: red;
+      }
+
+      .google:hover {
+            border: 1px solid red;
+            background-color: blue;
+      }
+
+      .facebook i,
+      .facebook span {
+            color: blue;
+      }
+
+      .google i,
+      .google span {
+            color: red;
+      }
+
+      .links i {
+            font-size: 23px;
+            line-height: 40px;
+            margin-left: -90px;
+      }
+
+      .links span {
+            position: absolute;
+            font-size: 17px;
+            font-weight: bold;
+            padding-left: 8px;
+            font-family: 'Open Sans', sans-serif;
+      }
+
+      .signup {
+            margin-top: 50px;
+            font-family: 'Noto Sans', sans-serif;
+      }
+
+      .signup a {
+            color: #3498db;
+            text-decoration: none;
+      }
+
+      .signup a:hover {
+            text-decoration: underline;
+      }
+</style>
+
+<body>
+      <div class="container">
+            <header>Welcome Back</header>
+            <form id="loginForm">
+                  <div class="input-field">
+                        <input type="text" required placeholder="Email Id" id="email">
+                  </div>
+                  <div class="input-field">
+                        <input class="pswrd" type="password" required placeholder="Password" id="password">
+                        <span class="show" style="color: #1DA1F2;">Show</span>
+                  </div>
+                  <div class="button">
+                        <div class="inner"></div>
+                        <button type="button">Continue</button>
+                  </div>
+            </form>
+            <div class="auth">
+                  Login With
+            </div>
+            <div class="links">
+                  <div class="facebook">
+                        <i class="fab fa-facebook-square"><span>Facebook</span></i>
+                  </div>
+                  <div class="google">
+                        <i class="fab fa-google-plus-square"><span>Google</span></i>
+                  </div>
+            </div>
+            <div class="signup">
+                  Not A Member? <a href="#">Signup Now</a>
+            </div>
+      </div>
+      <script>
+            var input = document.querySelector('.pswrd');
+            var show = document.querySelector('.show');
+            show.addEventListener('click', active);
+
+            function active() {
+                  if (input.type === "password") {
+                        input.type = "text";
+                        show.style.color = "#1DA1F2";
+                        show.textContent = "Hide";
+                  } else {
+                        input.type = "password";
+                        show.textContent = "Show";
+                        show.style.color = "#1DA1F2";
+                  }
+            }
+
+            var loginButton = document.querySelector('.button button');
+            var emailInput = document.getElementById('email');
+            var passwordInput = document.getElementById('password');
+
+            loginButton.addEventListener('click', function () {
+                  var enteredEmail = emailInput.value;
+                  var enteredPassword = passwordInput.value;
+
+                  if (enteredEmail === 'email@gmail.com' && enteredPassword === 'password') {
+                        window.location.href = 'index.html';
+                  } else {
+                        alert('Incorrect Email Or Password');
+                  }
+            });
+      </script>
+</body>
+
+</html>

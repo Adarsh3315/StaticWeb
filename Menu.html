@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Menu-Maruti Nandan</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    background: linear-gradient(to right, #ff4827, #fff, #00ff00);
+    font-family: Arial, sans-serif;
+
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .product-card {
+    width: 300px;
+    border-radius: 10px;
+    margin: 50px 0px 50px 0px;
+    background-color: #fff;
+  }
+
+  .product-image {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    top: -90px;
+    padding: 10px;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+    border-radius: 10px;
+  }
+
+  .product-image:hover img {
+    transform: scale(1.1);
+  }
+
+  .product-details {
+    padding: 20px;
+    margin-top: -90px;
+  }
+
+  .product-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: red;
+    font-weight: bold;
+    font-family: cursive;
+  }
+
+  .product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: blue;
+  }
+
+  .product-details.expand {
+    height: auto;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .order {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    background-color: orangered;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .product-details {
+    position: relative;
+    text-align: center;
+  }
+
+  .order:hover {
+    opacity: 0.8;
+  }
+
+  .footer-bottom {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+</style>
+
+<body>
+  <header class="bg-dark text-white p-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <button class="btn btn-dark">
+        <img src="https://shreemarutinandanrestaurant.com/wp-content/uploads/2022/01/mlogo.png" alt="logo image"
+          class="btn-img" height="50" width="150">
+      </button>
+      <ul class="list-unstyled d-flex mb-0">
+        <li class="me-3"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+        <li class="me-3"><a href="About.html" class="text-white text-decoration-none">About</a></li>
+        <li><a href="Contact.html" class="text-white text-decoration-none">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+  <marquee class="bg-primary text-white" style="font-family: cursive; font-style: italic;">Freedom Fest Is Live Now.Up
+    To 50-80% Off On Freedom Fest Sale.</marquee><br><br><br><br>
+
+  <div class="container">
+    <div class="product-card">
+      <div class="product-image">
+        <img src="All/Images/p5.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Masala Dosa</h2>
+        <p class="product-price">₹125.00</p><br><br>
+        <div class="buttons">
+          <a href="Product5.html">
+            <button class="order">Order Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="All/Images/p6.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Samosa</h2>
+        <p class="product-price">₹20.00</p><br><br>
+        <div class="buttons">
+          <a href="Product6.html">
+            <button class="order">Order Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="All/Images/p7.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Dal Makhani</h2>
+        <p class="product-price">₹190.00</p><br><br>
+        <div class="buttons">
+          <a href="Product7.html">
+            <button class="order">Order Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="All/Images/p8.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Noodles</h2>
+        <p class="product-price">₹100.00</p><br><br>
+        <div class="buttons">
+          <a href="Product8.html">
+            <button class="order">Order Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="All/Images/p9.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Chinese</h2>
+        <p class="product-price">₹120.00</p><br><br>
+        <div class="buttons">
+          <a href="Product9.html">
+            <button class="order">Order Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="All/Images/p10.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Masala Chana</h2>
+        <p class="product-price">₹80.00</p><br><br>
+        <div class="buttons">
+          <a href="Product10.html">
+            <button class="order">Order Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="All/Images/p11.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Manchurian</h2>
+        <p class="product-price">₹100.00</p><br><br>
+        <div class="buttons">
+          <a href="Product11.html">
+            <button class="order">Order Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="All/Images/p12.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Sambar</h2>
+        <p class="product-price">₹40.00</p><br><br>
+        <div class="buttons">
+          <a href="Product12.html">
+            <button class="order">Order Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="All/Images/p13.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Spe. Idli</h2>
+        <p class="product-price">₹180.00</p><br><br>
+        <div class="buttons">
+          <a href="Product13.html">
+            <button class="order">Order Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="All/Images/p14.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Pav Bhaji</h2>
+        <p class="product-price">₹190.00</p><br><br>
+        <div class="buttons">
+          <a href="Product14.html">
+            <button class="order">Order Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="All/Images/p15.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Khaman</h2>
+        <p class="product-price">₹170.00</p><br><br>
+        <div class="buttons">
+          <a href="Product15.html">
+            <button class="order">Order Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="All/Images/p16.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Jalebi</h2>
+        <p class="product-price">₹210.00</p><br><br>
+        <div class="buttons">
+          <a href="Product16.html">
+            <button class="order">Order Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="All/Images/p17.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Bataka Vada</h2>
+        <p class="product-price">₹200.00</p><br><br>
+        <div class="buttons">
+          <a href="Product17.html">
+            <button class="order">Order Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="All/Images/p18.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Chole Bhature</h2>
+        <p class="product-price">₹240.00</p><br><br>
+        <div class="buttons">
+          <a href="Product18.html">
+            <button class="order">Order Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="All/Images/p19.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Paneer Tikka</h2>
+        <p class="product-price">₹250.00</p><br><br>
+        <div class="buttons">
+          <a href="Product19.html">
+            <button class="order">Order Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="All/Images/p20.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Pasta</h2>
+        <p class="product-price">₹190.00</p><br><br>
+        <div class="buttons">
+          <a href="Product20.html">
+            <button class="order">Order Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="All/Images/p21.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Rolling Dosa</h2>
+        <p class="product-price">₹270.00</p><br><br>
+        <div class="buttons">
+          <a href="Product21.html">
+            <button class="order">Order Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="All/Images/p22.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Full Thali</h2>
+        <p class="product-price">₹310.00</p><br><br>
+        <div class="buttons">
+          <a href="Product22.html">
+            <button class="order">Order Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="All/Images/p23.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Pulav</h2>
+        <p class="product-price">₹180.00</p><br><br>
+        <div class="buttons">
+          <a href="Product23.html">
+            <button class="order">Order Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="All/Images/p24.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Kheer</h2>
+        <p class="product-price">₹90.00</p><br><br>
+        <div class="buttons">
+          <a href="Product24.html">
+            <button class="order">Order Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="All/Images/p25.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h2 class="product-title">Paff</h2>
+        <p class="product-price">₹30.00</p><br><br>
+        <div class="buttons">
+          <a href="Product25.html">
+            <button class="order">Order Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div>&copy;
+        <script language="javascript" type="text/javascript">document.write(new Date().getFullYear());</script>
+        Copyright Maruti Nandan. All Rights Reserved.
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

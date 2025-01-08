@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Product24</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+      <style>
+            body {
+                  background: linear-gradient(180deg, #ff4500, #fff, #00ff00);
+            }
+
+            .footer-bottom {
+                  background-color: #343a40;
+                  color: white;
+                  text-align: center;
+                  padding: 10px 0;
+            }
+      </style>
+</head>
+
+<body>
+      <header class="bg-dark text-white p-3">
+            <div class="container d-flex justify-content-between align-items-center">
+                  <button class="btn btn-dark">
+                        <img src="https://shreemarutinandanrestaurant.com/wp-content/uploads/2022/01/mlogo.png"
+                              alt="logo image" class="btn-img" height="50" width="150">
+                  </button>
+                  <ul class="list-unstyled d-flex mb-0">
+                        <li class="me-3"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li class="me-3"><a href="Menu.html" class="text-white text-decoration-none">Menu</a></li>
+                        <li><a href="About.html" class="text-white text-decoration-none">About</a></li>
+                  </ul>
+            </div>
+      </header>
+      <main class="container mt-5">
+            <section class="row">
+                  <div class="col-md-6"><br><br>
+                        <img src="All/Images/p24.png" alt="Product Image" alt="image" class="img-fluid"
+                              style="padding-right: 150px;">
+                  </div>
+                  <div class="col-md-6">
+                        <h2 class="h5" style="color:rgb(7, 178, 7); font-style: italic; font-family: cursive;">Special
+                              Offer For You.
+                        </h2>
+                        <h1 class="h2" style="color:red;">Kheer</h1>
+                        <p style="color: blue; font-family: cursive;">
+                              Indulge in our exquisite Kheer, a traditional Indian rice pudding delicately simmered in
+                              creamy milk, adorned with fragrant saffron and garnished with crunchy nuts, creating a
+                              harmonious blend of flavors and textures that will transport you to a realm of sweet
+                              bliss.
+                        </p>
+                        <div class="d-flex align-items-center mb-3">
+                              <div class="me-2">
+                                    <h4 style="color:red; font-family: cursive;">Price :-
+                                          <span class="h4" style="color: rgb(7, 178, 7);">₹90.00</span>
+                                          <span class="h6 text-decoration-line-through ms-2"
+                                                style="color: red;">₹180.00</span>
+                                    </h4>
+                              </div>
+                              <span class="badge bg-success">50% off</span>
+                        </div>
+                        <div class="mb-3">
+                              <h6 style="color:blue; font-family:cursive;">Quantity&nbsp;&nbsp;<input type="number"
+                                          class="h6" value="1" min="1" max="10" id="quantityInput"></h6>
+                        </div>
+                        <div class="mb-3">
+                              <h5 style="color:red; font-family:cursive;">Total Price :- <span
+                                          id="totalPrice">₹90.00</span></h5>
+                        </div>
+                        <a href="javascript:void(0);" class="btn btn-primary mt-3" id="orderBtn">Order Now</a>
+            </section>
+      </main><br><br>
+      <div class="footer-bottom">
+            <div class="container">
+                  <div>&copy;
+                        <script language="javascript"
+                              type="text/javascript">document.write(new Date().getFullYear());</script>
+                        Copyright Maruti Nandan. All Rights Reserved.
+                  </div>
+            </div>
+      </div>
+
+      <script>
+            var quantityInput = document.getElementById('quantityInput');
+            var totalPriceElement = document.getElementById('totalPrice');
+            var orderBtn = document.getElementById('orderBtn');
+
+            function updateTotalPrice() {
+                  var quantity = parseInt(quantityInput.value);
+                  var basePrice = 90;
+                  var totalPrice = quantity * basePrice;
+                  totalPriceElement.textContent = '₹' + totalPrice.toFixed(2);
+            }
+            updateTotalPrice();
+            quantityInput.addEventListener('input', updateTotalPrice);
+
+            orderBtn.addEventListener('click', () => {
+                  alert('Your Order Has Been Successfully Placed.');
+                  window.location.href = 'index.html';
+            });
+      </script>
+
+</body>
+
+</html>
